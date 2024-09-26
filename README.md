@@ -2,6 +2,7 @@
 
 
 ## Project Structure
+```
 ├───.github
 │   └───workflows
 ├───config
@@ -38,3 +39,4 @@
 ├───requirements.txt
 ├───setup.py
 ├───template.py
+```
