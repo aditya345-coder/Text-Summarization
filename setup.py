@@ -1,5 +1,6 @@
 import setuptools
 
+
 with open("README.md", "r", encoding="UTF-8") as f:
     long_description = f.read()
     
@@ -10,7 +11,6 @@ REPO_NAME="Text-Summarization"
 AUTHOR_USER_NAME="aditya345-coder"
 SRC_REPO="textSummarizer"
 AUTHOR_EMAIL="neuralninja01@gmail.com"
-
 
 setuptools.setup(
     name=SRC_REPO,
