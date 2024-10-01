@@ -1,0 +1,23 @@
+**IAM**
+
+An IAM user is an identity with long-term credentials that is used to interact with AWS in an account.
+
+Step 1: Go to IAM.
+Step 2: Click on user in Access Management
+Step 3: Click create user
+Step 4: Write user name 
+Step 5: Set permissions 
+    Attach policies directly: Attach a managed policy directly to a user. As a best practice, 
+    we recommend attaching policies to a group instead. Then, add the user to the appropriate group.
+Step 6: Select policies you want to use. Click next.
+Step 7: Click on the user you have created.
+Step 8: Click on security credentials
+Step 7: Click on access key click on create access key
+Step 8: Click on CLI option for access key best practices. Click on next
+Step 9: Do not have to write or change anything just click on Click on create access key.
+
+
+**EC2**
+Virtual service
+
+Step 1: Click on launch service
