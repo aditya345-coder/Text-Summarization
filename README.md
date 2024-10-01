@@ -104,7 +104,8 @@ This is a Flask-based web application that provides text summarization using the
 
 ## Demo
 
-Uploading Text Summarization - Demo.mp4…
+
+https://github.com/user-attachments/assets/c46806c9-e4fb-4a54-a8f1-5659b9e7c9bc
 
 
 ### Try it out
