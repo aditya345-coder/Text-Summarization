@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<center><img src="static\images\TesxtSummarization.png" alt="" height="200px"></center>
+<div class="container">
+    Text summarization is the creation of a short, accurate, and fluent summary of a longer text document. Automatic text summarization methods are greatly needed to address the ever-growing amount of text data available online. 
+    This could help to discover relevant information and to consume relevant information faster.
+</div>
+<br>
+<div class="container">
+    <div class="container mx-2 mb-2 d-flex justify-content-center">
+        <div>
+            <a href="{{ url_for('training') }}"><button type="button" class="btn btn-primary me-1">Train Model</button></a>
+        </div>
+            <a href="{{ url_for('predict') }}"></a><div><button type="button" class="btn btn-primary">Prediction</button></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

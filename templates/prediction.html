@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <!-- <div >
+        <div class="container mx-2 mb-2 d-flex justify-content-center">
+            <form method="POST" action="{{ url_for('predict') }}">
+                <textarea name="text" id="text"></textarea>
+                <div class="container mx-2 mb-2 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div> -->
+
+        <div class="container">
+                <div class="row">
+                  <div class="col text-center">
+                    <form method="POST" action="{{ url_for('predict') }}">
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Write Or Paste text here" id="text" name="text" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2"></label>
+                        </div>
+                        <br>
+                        <!-- <textarea name="text" id="text"></textarea> -->
+                        <div class="container mx-2 mb-2 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+            <center><h2>Summarized Text</h2></center>
+            <div class="container mx-2 mb-2 d-flex justify-content-center">
+                {{result}}
+            </div>
+        </div>
+    <!-- </div> -->
+{% endblock %}
