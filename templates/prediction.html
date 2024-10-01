@@ -1,38 +1,47 @@
 {% extends 'layout.html' %}
 
-{% block content %}
-    <!-- <div >
-        <div class="container mx-2 mb-2 d-flex justify-content-center">
-            <form method="POST" action="{{ url_for('predict') }}">
-                <textarea name="text" id="text"></textarea>
-                <div class="container mx-2 mb-2 d-flex justify-content-center">
+{% block content %}  
+    <div class="container">
+        <div class="row">
+          <div class="col text-center">
+                <form method="POST" action="{{ url_for('predict') }}">
+                    <!-- Repopulate textarea with the entered text -->
+                    <textarea name="text" id="text" rows="6" cols="60">{{ input_text }}</textarea>
+                    <br>
                     <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-        </div>
-        <div> -->
-
-        <div class="container">
-                <div class="row">
-                  <div class="col text-center">
-                    <form method="POST" action="{{ url_for('predict') }}">
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Write Or Paste text here" id="text" name="text" style="height: 100px"></textarea>
-                            <label for="floatingTextarea2"></label>
-                        </div>
-                        <br>
-                        <!-- <textarea name="text" id="text"></textarea> -->
-                        <div class="container mx-2 mb-2 d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </form>
-                  </div>
-                </div>
-            </div>
-            <center><h2>Summarized Text</h2></center>
-            <div class="container mx-2 mb-2 d-flex justify-content-center">
-                {{result}}
+                    <button type="button" class="btn btn-secondary" onclick="clearText()">New Text</button>
+                </form>
             </div>
         </div>
-    <!-- </div> -->
+    </div>
+    <br>
+    <div>
+        <center><h2 >Summarized Text</h2></center>
+    </div>
+    <div id="summary-div" class="container mx-2 mb-2 d-flex justify-content-center">
+        {% if result %}
+            <br>
+            <br>
+            <div>
+                <p id="summary-text">{{ result }}</p>
+            </div>
+        {% endif %}
+    </div>
+    
+    <!-- JavaScript to clear the textarea and summary -->
+    <script>
+    function clearText() {
+        // Clear the textarea
+        document.getElementById('text').value = '';
+    
+        // Clear the summary text and hide the summary section
+        const summaryDiv = document.getElementById('summary-div');
+        const summaryText = document.getElementById('summary-text');
+    
+        if (summaryDiv && summaryText) {
+            summaryText.innerHTML = ''; // Clear the summary text
+            summaryDiv.style.display = 'none'; // Optionally hide the summary section
+        }
+    }
+    </script>
 {% endblock %}
